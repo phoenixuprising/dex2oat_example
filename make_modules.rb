@@ -22,7 +22,7 @@ EOF
     f << "include ':dummies:module-#{i}'\n"
   }
 
-  File.write(path, gradle_file)
+  File.write(gradle_path, gradle_file)
   open('app/deps.txt', 'a') { |f|
     f << "implementation project(':dummies:module-#{i}')\n"
   }
